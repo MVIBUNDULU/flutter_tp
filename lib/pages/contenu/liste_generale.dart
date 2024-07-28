@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nuit3/pages/footer.dart';
-import 'package:nuit3/pages/header.dart';
+import 'package:app/pages/footer.dart';
+import 'package:app/pages/header.dart';
 
 class AllTitleSection extends StatelessWidget {
   const AllTitleSection({super.key});

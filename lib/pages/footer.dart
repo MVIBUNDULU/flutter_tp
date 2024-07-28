@@ -1,25 +1,32 @@
+import 'package:app/pages/Accueil.dart';
 import 'package:flutter/material.dart';
 
-class FooterSection extends StatelessWidget {
+class FooterSection extends StatefulWidget {
   const FooterSection({super.key});
 
   @override
+  State<FooterSection> createState() => _FooterSectionState();
+}
+
+class _FooterSectionState extends State<FooterSection> {
+  @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-       items: [
-        BottomNavigationBarItem(
+    return BottomNavigationBar(type: BottomNavigationBarType.fixed, items: [
+      BottomNavigationBarItem(
           label: 'Accueil',
-          icon: Container(
-            margin: EdgeInsets.all(5),
-            padding: EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(10),
+          icon: InkWell(
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeSection(),)),
+            child: Container(
+              margin: EdgeInsets.all(5),
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(Icons.home),
             ),
-            child: Icon(Icons.home),
           )),
-                  BottomNavigationBarItem(
+      BottomNavigationBarItem(
           label: 'Comité',
           icon: Container(
             margin: EdgeInsets.all(5),
@@ -30,7 +37,7 @@ class FooterSection extends StatelessWidget {
             ),
             child: Icon(Icons.group),
           )),
-                  BottomNavigationBarItem(
+      BottomNavigationBarItem(
           label: 'Historique',
           icon: Container(
             margin: EdgeInsets.all(5),
@@ -41,7 +48,7 @@ class FooterSection extends StatelessWidget {
             ),
             child: Icon(Icons.newspaper),
           )),
-                            BottomNavigationBarItem(
+      BottomNavigationBarItem(
           label: 'Aide',
           icon: Container(
             margin: EdgeInsets.all(5),

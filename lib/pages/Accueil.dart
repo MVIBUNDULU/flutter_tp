@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nuit3/pages/contenu/liste_generale.dart';
-import 'package:nuit3/pages/footer.dart';
-import 'package:nuit3/pages/header.dart';
+import 'package:app/pages/contenu/liste_generale.dart';
+import 'package:app/pages/footer.dart';
+import 'package:app/pages/header.dart';
 
 class HomeSection extends StatelessWidget {
   const HomeSection({super.key});
@@ -9,12 +9,6 @@ class HomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        //'/':(context)=>HomeSection(),
-        'liste':(context)=>AllTitleSection(),
-      },
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -91,12 +85,12 @@ class HomeSection extends StatelessWidget {
                         child: TextButton(
                           onPressed: () {
                             print("le bouton fonctionne bien");
-                             Navigator.push(
+                            Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => AllTitleSection(),
                                 ));
-                             /* Navigator.pushNamed(context, 'liste');*/
+                            /* Navigator.pushNamed(context, 'liste');*/
                           },
                           child: Column(
                             children: [
